@@ -2,14 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model; //ORM (object relational mapper)
+use Laravel\Sanctum\HasApiTokens;
 
 class BukuModel extends Model
 {
-    use HasFactory;
-    protected $table = 'tabel_buku';
+    //
+    use HasApiTokens;
+    
+    protected $table = 'table_buku';
     protected $primaryKey = 'id_buku';
-    protected $fillable = ['judul_buku', 'pengarang', 'tahun_terbit'];
     public $timestamps = false;
+    protected $fillable = ['judul_buku',
+                           'pengarang',
+                           'penerbit',
+                           'cover'];
 }

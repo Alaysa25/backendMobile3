@@ -13,11 +13,12 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create($this->table,function(Blueprint $struktur){
-            $struktur->integer('id_buku',true,true); // Primary key and autoincrement
-            $struktur->string('judul_buku',255)->nullable(false);
-            $struktur->string('pengarang',200)->nullable(false);
-            $struktur->year('tahun_terbit')->nullable(false);
+        Schema::create($this->table,function(Blueprint $kolom){
+            $kolom->integer('id_buku',true,true);
+            $kolom->string('judul_buku',100)->nullable(false);
+            $kolom->string('pengarang',100)->nullable(false);
+            $kolom->string('penerbit',100)->nullable(false);
+            $kolom->string('cover',200)->nullable(true);
         });
     }
 
