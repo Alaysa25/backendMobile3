@@ -10,7 +10,7 @@ class BukuModel extends Model
     //
     use HasApiTokens;
     
-    protected $table = 'table_buku';
+    protected $table = 'tabel_buku';
     protected $primaryKey = 'id_buku';
     public $timestamps = false;
     protected $fillable = ['judul_buku',
